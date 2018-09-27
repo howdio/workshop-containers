@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/white.css">
+	</head>
+	<body>
+		<style>
+			.container{ display: flex; }
+			.column{ flex: 1; }
+		</style>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+                    <textarea data-template>
+                        ### Introduction to Containers
+                        ![Introduction](images/containers.jpg)
+                    </textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### What to expect
+						* Little bit of theory
+						* Setting up your environment
+						* Hands-on hacking with containers
+					</textarea>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							### Containers are for **isolation**
+							![Container Isolation](images/isolation.png)
+						</textarea>
+					</section>
+					<section>
+						<h2>Single Host</h2>
+						<div class="container">
+							<div class="column">
+								<img data-src="images/hosting-4.png">
+							</div>
+							<div class="column">
+								<ul>
+									<li>No isolation</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Multi Host</h2>
+						<div class="container">
+							<div class="column">
+								<img data-src="images/hosting-3.png">
+							</div>
+							<div class="column">
+								<ul>
+									<li>Best isolation</li>
+									<li>Expensive</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Virtualization</h2>
+						<div class="container">
+							<div class="column">
+								<img data-src="images/hosting-2.png">
+							</div>
+							<div class="column">
+								<ul>
+									<li>Good isolation</li>
+									<li>OS Overhead</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Containers</h2>
+						<div class="container">
+							<div class="column">
+								<img data-src="images/hosting-1.png">
+							</div>
+							<div class="column">
+								<ul>
+									<li>Best of both worlds</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							### Containers are for **portability**
+							<div class="container">
+								<div class="column">
+									<img data-src="images/transport-boat.jpg">
+								</div>
+								<div class="column">
+									<img data-src="images/transport-train.jpg">
+								</div>
+								<div class="column">
+									<img data-src="images/transport-truck.jpg">
+								</div>
+								<div class="column">
+									<img data-src="images/transport-fun.jpg">
+								</div>
+							</div>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### IT Infrastructure
+							![IT Infrastructure](images/portability.png)
+						</textarea>
+					</section>
+				</section>
+			</div>
+		</div>
+        <script src="js/reveal.js"></script>
+        <script src="plugin/markdown/marked.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+	</body>
+</html>
