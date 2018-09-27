@@ -9,7 +9,7 @@ data "aws_vpc" "default" {
 
 resource "aws_key_pair" "workshop" {
   key_name   = "workshop"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCuKZw4z7Jkb4hPkPs4YvAIIbwaXzi7xrP7xhuDroUw5l3i07N2ZHO/Q353ZM7ZaaYCYmEmPCh0a2DW5R0xC6YDGgg9/rInuzCPZqOHupW9dakCKxRgmuJ+IKtlWdcz2x32hW/nOvoDf0QH8y1M5AudpjICK1sgelYyn+65f9g0w9KcgfAJF7tko7bw1z36f6q8xpsQsrojp8+QKzZZ6oApXT9EyNBjT0ZkXmW+vV7GFMCv8Kcf03n8bgbO4iHbQzHMOm0uuIl0y9JWHPEBvMDHBrsM1Uu1oiUFE9PtIvz/QFi6tQ4yHvcRkXERTl31SanRG142S0ZKpOmGKdU/szifcn9uXsy4aFG3cb64L+9g4UBQ23wX51EMQkA2HRVj+V8yHtt5OjxP8rLZ4VVxAtv8rqNkSaPIthatnX29F2neaPswJwaqidNVAWg+88Swpy3IgTGkIg4SYuAg3JpLYRNbEN4bvd7KA5dsigLTL5c4X/ysWCddqQpkVuCAu/6sQ1RgnIGUy79lykbFsg+ZjBWlpMjxQW0YCcXlHYGpyH/mbJa9VMlqRcLf70dszGKkQok1MVgnbBNRyvV8T8G0HaoNWfjjDlxlGl/vygNKLLefjX8Ge5GJJUofdt8QS1XbSl24J1KNidYXUf34CgQX8/CinVRwY1Fn4C0F2qD5v6f8CQ== workshop@exact.com"
+  public_key = "${var.public_key}"
 }
 
 resource "aws_security_group" "workshop" {
@@ -34,6 +34,13 @@ resource "aws_security_group" "workshop" {
   ingress {
     from_port   = 80
     to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["${var.cidr_blocks}"]
+  }
+
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["${var.cidr_blocks}"]
   }
