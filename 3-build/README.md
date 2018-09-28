@@ -5,7 +5,7 @@ Ok, we understand that the container images are immutable and that we have to bu
 For this lab we need to download the repository which contains the presentation. To do this, we will clone the Git repository on your local machine.
 ~~~sh
 git clone https://github.com/howdio/workshop-containers
-cd workshop-container
+cd workshop-containers
 ~~~
 
 ## 2 - Prepare Dockerfile
