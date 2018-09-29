@@ -4,7 +4,9 @@ We have covered that basic concepts of building and running containers. This lab
 ## 1 - Volume mounts
 ~~~sh
 docker volume create --name workshop-files
-docker run --rm -v workshop-files:/workshop -v $(pwd):/src ubuntu cp -r /src/presentation/* /workshop/
+docker run --rm -v workshop-files:/workshop -v $(pwd):/src -it ubuntu
+cp -r /src/presentation/* /workshop/
+exit
 ~~~
 
 ~~~sh
